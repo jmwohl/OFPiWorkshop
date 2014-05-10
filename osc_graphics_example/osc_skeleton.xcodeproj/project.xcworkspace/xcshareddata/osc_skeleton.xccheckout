@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E1E9E064-AFA2-4F01-987D-F028169E39D0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>osc_skeleton</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DC4C1A64-F9F3-4441-9693-57977DCFCDFF</key>
+		<string>ssh://github.com/jmwohl/OFPiWorkshop.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>osc_skeleton/osc_skeleton.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DC4C1A64-F9F3-4441-9693-57977DCFCDFF</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/jmwohl/OFPiWorkshop.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DC4C1A64-F9F3-4441-9693-57977DCFCDFF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DC4C1A64-F9F3-4441-9693-57977DCFCDFF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OFPiWorkshop</string>
+		</dict>
+	</array>
+</dict>
+</plist>
