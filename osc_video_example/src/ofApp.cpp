@@ -11,8 +11,19 @@ void ofApp::setup(){
     camWidth = 640;
     camHeight = 480;
     
+    vector<ofVideoDevice> devices = vidGrabber.listDevices();
+    
+    for(int i = 0; i < devices.size(); i++){
+        cout << devices[i].id << ": " << devices[i].deviceName;
+        if( devices[i].bAvailable ){
+            cout << endl;
+        }else{
+            cout << " - unavailable " << endl;
+        }
+    }
+    
     vidGrabber.setDeviceID(0);
-	vidGrabber.setDesiredFrameRate(60);
+	vidGrabber.setDesiredFrameRate(30);
 	vidGrabber.initGrabber(camWidth,camHeight);
     
     // the number of bytes is width * height * 3 for RGB.
