@@ -8,8 +8,8 @@ void ofApp::setup(){
     oscSender.setup(BROADCAST_IP, PORT);
     
     // let's make the camera display full screen.
-    camWidth = ofGetWindowWidth();
-    camHeight = ofGetWindowHeight();
+    camWidth = 640;
+    camHeight = 480;
     
     vidGrabber.setDeviceID(0);
 	vidGrabber.setDesiredFrameRate(60);
