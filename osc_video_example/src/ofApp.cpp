@@ -47,16 +47,15 @@ void ofApp::update(){
             // example of handling a /mouse/moved message
             if(m.getAddress() == "/mouse/moved"){
                 cout << m.getRemoteIp() << " mouse moved to " << m.getArgAsInt32(0) << ", " << m.getArgAsInt32(1) << endl;
-                
-                // REACT to the /mouse/moved message!
+
+                mouseClickEffect = ofMap(m.getArgAsFloat(1), 0, ofGetScreenHeight(), 0, 255);
             }
             
             // example of handling a /mouse/pressed message
             if(m.getAddress() == "/mouse/pressed"){
                 cout << m.getRemoteIp() << " mouse pressed at " << m.getArgAsInt32(0) << ", " << m.getArgAsInt32(1) << endl;
                 
-                // Use the y position of the mouse click message, map it to the mouseClickEffect value.
-                mouseClickEffect = ofMap(m.getArgAsFloat(1), 0, ofGetScreenHeight(), 0, 255);
+                // REACT to the /mouse/pressed message!
             }
             
             // example of handling a /key/pressed message
