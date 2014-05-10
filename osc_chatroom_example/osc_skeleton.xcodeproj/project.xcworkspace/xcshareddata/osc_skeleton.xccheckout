@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E1E9E064-AFA2-4F01-987D-F028169E39D0</string>
+	<string>B90C2112-1E72-46E9-A40C-EC6751E4AB50</string>
 	<key>IDESourceControlProjectName</key>
 	<string>osc_skeleton</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>DC4C1A64-F9F3-4441-9693-57977DCFCDFF</key>
-		<string>ssh://github.com/jmwohl/OFPiWorkshop.git</string>
+		<key>E16615C3-23C1-44AD-A3EF-4AE132FBCEDE</key>
+		<string>https://github.com/jedahan/osc_skeleton.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>osc_skeleton/osc_skeleton.xcodeproj/project.xcworkspace</string>
+	<string>osc_skeleton.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>DC4C1A64-F9F3-4441-9693-57977DCFCDFF</key>
-		<string>../../..</string>
+		<key>E16615C3-23C1-44AD-A3EF-4AE132FBCEDE</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/jmwohl/OFPiWorkshop.git</string>
+	<string>https://github.com/jedahan/osc_skeleton.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>DC4C1A64-F9F3-4441-9693-57977DCFCDFF</string>
+	<string>E16615C3-23C1-44AD-A3EF-4AE132FBCEDE</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>DC4C1A64-F9F3-4441-9693-57977DCFCDFF</string>
+			<string>E16615C3-23C1-44AD-A3EF-4AE132FBCEDE</string>
 			<key>IDESourceControlWCCName</key>
-			<string>OFPiWorkshop</string>
+			<string>osc_chatroom_example</string>
 		</dict>
 	</array>
 </dict>

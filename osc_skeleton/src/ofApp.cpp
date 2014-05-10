@@ -20,18 +20,18 @@ void ofApp::update(){
         // This is to ensure we're not reacting to our own messages
         if(m.getRemoteIp() != MY_IP_ADDRESS) {
             
-            // example of handling a /mouse/pressed message
+            // example of handling a /mouse/moved message
             if(m.getAddress() == "/mouse/moved"){
                 cout << m.getRemoteIp() << " mouse moved to " << m.getArgAsInt32(0) << ", " << m.getArgAsInt32(1) << endl;
                 
-                // REACT to the /mouse/pressed message!
+                // REACT to the /mouse/moved message!
             }
             
-            // example of handling a /mouse/moved message
+            // example of handling a /mouse/pressed message
             if(m.getAddress() == "/mouse/pressed"){
                 cout << m.getRemoteIp() << " mouse pressed at " << m.getArgAsInt32(0) << ", " << m.getArgAsInt32(1) << endl;
                 
-                // REACT to the /mouse/moved message!
+                // REACT to the /mouse/pressed message!
             }
             
             // example of handling a /key/pressed message
