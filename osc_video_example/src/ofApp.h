@@ -27,9 +27,14 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
     
-    ofxOscReceiver oscReceiver;
-    ofxOscSender oscSender;
+    ofxOscReceiver      oscReceiver;
+    ofxOscSender        oscSender;
     
-    ofVideoGrabber vidGrabber;
+    ofVideoGrabber      vidGrabber;
+    unsigned char * 	videoBytesAltered;  // videos are just a bunch of pixels
+    ofTexture			videoTexture;       // a texture in which to display the altered video
+    int 				camWidth;           // camera width
+    int 				camHeight;          // camera height
+    int                 mouseClickEffect;
 
 };

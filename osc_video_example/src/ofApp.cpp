@@ -7,20 +7,24 @@ void ofApp::setup(){
     // broadcast
     oscSender.setup(BROADCAST_IP, PORT);
     
-    int camWidth = 640;
-    int camHeight = 480;
-    camWidth = ofGetScreenWidth();
-    camHeight = ofGetScreenHeight();
+    // let's make the camera display full screen.
+    camWidth = ofGetWindowWidth();
+    camHeight = ofGetWindowHeight();
     
     vidGrabber.setDeviceID(0);
 	vidGrabber.setDesiredFrameRate(60);
 	vidGrabber.initGrabber(camWidth,camHeight);
+    
+    // the number of bytes is width * height * 3 for RGB.
+    videoBytesAltered = new unsigned char[camWidth*camHeight*3];
+	videoTexture.allocate(camWidth,camHeight, GL_RGB);
+	ofSetVerticalSync(true);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
     
-    // check for waiting messages
+    // check for waiting message
 	while(oscReceiver.hasWaitingMessages()){
 		// get the next message
 		ofxOscMessage m;
@@ -40,7 +44,8 @@ void ofApp::update(){
             if(m.getAddress() == "/mouse/pressed"){
                 cout << m.getRemoteIp() << " mouse pressed at " << m.getArgAsInt32(0) << ", " << m.getArgAsInt32(1) << endl;
                 
-                // REACT to the /mouse/pressed message!
+                // Use the y position of the mouse click message, map it to the mouseClickEffect value.
+                mouseClickEffect = ofMap(m.getArgAsFloat(1), 0, ofGetScreenHeight(), 0, 255);
             }
             
             // example of handling a /key/pressed message
@@ -52,15 +57,26 @@ void ofApp::update(){
         }
 	}
     
+    // Update the video
     vidGrabber.update();
-    
+	
+    // If we have a new frame from the camera, loop through each pixel
+    // and alter it.
+	if (vidGrabber.isFrameNew()){
+		int totalPixels = camWidth*camHeight*3;
+		unsigned char * pixels = vidGrabber.getPixels();
+		for (int i = 0; i < totalPixels; i++){
+			videoBytesAltered[i] = pixels[i] + mouseClickEffect;
+		}
+		videoTexture.loadData(videoBytesAltered, camWidth,camHeight, GL_RGB);
+	}
     
 }
 
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-   vidGrabber.draw(0,0);
+    videoTexture.draw(0,0,camWidth,camHeight);
 }
 
 //--------------------------------------------------------------
