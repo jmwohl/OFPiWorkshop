@@ -35,6 +35,6 @@ public:
     ofTexture			videoTexture;       // a texture in which to display the altered video
     int 				camWidth;           // camera width
     int 				camHeight;          // camera height
-    int                 mouseClickEffect;
+    int                 mouseEffect;
 
 };

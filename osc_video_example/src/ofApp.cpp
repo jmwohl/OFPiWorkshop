@@ -48,7 +48,7 @@ void ofApp::update(){
             if(m.getAddress() == "/mouse/moved"){
                 cout << m.getRemoteIp() << " mouse moved to " << m.getArgAsInt32(0) << ", " << m.getArgAsInt32(1) << endl;
 
-                mouseClickEffect = ofMap(m.getArgAsFloat(1), 0, ofGetScreenHeight(), 0, 255);
+                mouseEffect = ofMap(m.getArgAsFloat(1), 0, ofGetScreenHeight(), 0, 255);
             }
             
             // example of handling a /mouse/pressed message
@@ -76,7 +76,7 @@ void ofApp::update(){
 		int totalPixels = camWidth*camHeight*3;
 		unsigned char * pixels = vidGrabber.getPixels();
 		for (int i = 0; i < totalPixels; i++){
-			videoBytesAltered[i] = pixels[i] + mouseClickEffect;
+			videoBytesAltered[i] = pixels[i] + mouseEffect;
 		}
 		videoTexture.loadData(videoBytesAltered, camWidth,camHeight, GL_RGB);
 	}
