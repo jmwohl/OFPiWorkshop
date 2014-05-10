@@ -50,13 +50,15 @@ void ofApp::update(){
 
 
 //--------------------------------------------------------------
-void ofApp::draw(){
+void ofApp::draw() {
+    // loop through the vector of remoteMicePositions, draw 'em.
     for (int i = 0; i < remoteMicePositions.size(); i++) {
         ofVec2f mousePos = remoteMicePositions.at(i);
         drawRemoteMouse(mousePos.x, mousePos.y);
     }
 }
 
+// we separate out the actual drawing into it's own method.
 void ofApp::drawRemoteMouse(int x, int y) {
     ofSetColor(0,0,255);
     ofFill();
