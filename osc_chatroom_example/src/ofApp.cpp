@@ -5,8 +5,8 @@ void ofApp::setup(){
     oscReceiver.setup(PORT);
     
     // broadcast
-    oscSender.setup("10.88.0.255", PORT);
- 
+    oscSender.setup(BROADCAST_IP, PORT);
+    
     gui = new ofxUICanvas();
     gui->addTextInput("CHAT", chat)->setAutoClear(false);
     ofAddListener(gui->newGUIEvent, this, &ofApp::guiEvent);
@@ -24,28 +24,30 @@ void ofApp::update(){
         
         if(m.getRemoteIp() != MY_IP_ADDRESS){
             
-        // example of handling a /mouse/pressed message
-        if(m.getAddress() == "/mouse/moved"){
-			cout << m.getRemoteIp() << " mouse moved to " << m.getArgAsInt32(0) << ", " << m.getArgAsInt32(1) << endl;
+            // example of handling a /mouse/moved message
+            if(m.getAddress() == "/mouse/moved"){
+                cout << m.getRemoteIp() << " mouse moved to " << m.getArgAsInt32(0) << ", " << m.getArgAsInt32(1) << endl;
+                
+                // REACT to the /mouse/moved message!
+            }
             
-            // REACT to the /mouse/pressed message!
-		}
-        
-        // example of handling a /mouse/moved message
-        if(m.getAddress() == "/mouse/pressed"){
-			cout << m.getRemoteIp() << " mouse pressed at " << m.getArgAsInt32(0) << ", " << m.getArgAsInt32(1) << endl;
+            // example of handling a /mouse/pressed message
+            if(m.getAddress() == "/mouse/pressed"){
+                cout << m.getRemoteIp() << " mouse pressed at " << m.getArgAsInt32(0) << ", " << m.getArgAsInt32(1) << endl;
+                
+                // REACT to the /mouse/pressed message!
+            }
             
-            // REACT to the /mouse/moved message!
-		}
-        
-        // example of handling a /key/pressed message
-        if(m.getAddress() == "/key/pressed"){
-			cout << m.getRemoteIp() << " key pressed " << m.getArgAsInt32(0) << endl;
-            
-            // REACT to the /mouse/moved message!
-		}
+            // example of handling a /key/pressed message
+            if(m.getAddress() == "/key/pressed"){
+                cout << m.getRemoteIp() << " key pressed " << m.getArgAsInt32(0) << endl;
+                
+                // REACT to the /mouse/moved message!
+            }
         }
+        
         // handle chat message
+        // this is outside the IP check because we do want to display our own messages as well
         if(m.getAddress() == "/chat"){
 			handleChat(&m);
 		}
@@ -53,15 +55,17 @@ void ofApp::update(){
 }
 
 
+// Called when we receive a chat message
+// Gets the message and pushes it onto the vector (like an "array") of messages.
 void ofApp::handleChat(ofxOscMessage *m) {
     string ip = m->getRemoteIp();
     string message = m->getArgAsString(0);
-
-    messages.push_back(ip + message);
+    messages.push_back(ip + ": " + message);
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    // draw the last 20 messages received.
     y = 0;
     if(messages.size()){
         for(int i =0; i<MIN(messages.size(),20); i++){

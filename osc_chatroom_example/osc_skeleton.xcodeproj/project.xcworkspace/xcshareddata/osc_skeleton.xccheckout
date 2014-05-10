@@ -5,36 +5,48 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>B90C2112-1E72-46E9-A40C-EC6751E4AB50</string>
+	<string>4EE0345A-278C-46C5-96F7-A781AC0BE900</string>
 	<key>IDESourceControlProjectName</key>
 	<string>osc_skeleton</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E16615C3-23C1-44AD-A3EF-4AE132FBCEDE</key>
-		<string>https://github.com/jedahan/osc_skeleton.git</string>
+		<key>0CE3A558-4DFF-48BE-B4D3-65B924B71201</key>
+		<string>https://github.com/rezaali/ofxUI.git</string>
+		<key>B6177F6C-6A6F-49BB-ABCF-F47E6587BEA5</key>
+		<string>ssh://github.com/jmwohl/OFPiWorkshop.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>osc_skeleton.xcodeproj/project.xcworkspace</string>
+	<string>osc_chatroom_example/osc_skeleton.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E16615C3-23C1-44AD-A3EF-4AE132FBCEDE</key>
-		<string>../..</string>
+		<key>0CE3A558-4DFF-48BE-B4D3-65B924B71201</key>
+		<string>../../../../../addons/ofxUI</string>
+		<key>B6177F6C-6A6F-49BB-ABCF-F47E6587BEA5</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/jedahan/osc_skeleton.git</string>
+	<string>ssh://github.com/jmwohl/OFPiWorkshop.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E16615C3-23C1-44AD-A3EF-4AE132FBCEDE</string>
+	<string>B6177F6C-6A6F-49BB-ABCF-F47E6587BEA5</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E16615C3-23C1-44AD-A3EF-4AE132FBCEDE</string>
+			<string>B6177F6C-6A6F-49BB-ABCF-F47E6587BEA5</string>
 			<key>IDESourceControlWCCName</key>
-			<string>osc_chatroom_example</string>
+			<string>OFPiWorkshop</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0CE3A558-4DFF-48BE-B4D3-65B924B71201</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxUI</string>
 		</dict>
 	</array>
 </dict>
