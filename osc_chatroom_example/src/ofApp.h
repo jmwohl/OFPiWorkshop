@@ -9,8 +9,8 @@
 
 // You can find these IP addresses by running the following at the command line
 // ifconfig | grep inet | grep 127.0.0.1 --invert-match
-#define MY_IP_ADDRESS "10.88.0.108"
-#define BROADCAST_IP "10.88.0.255"
+#define MY_IP_ADDRESS "192.168.2.2"
+#define BROADCAST_IP "192.168.2.255"
 
 class ofApp : public ofBaseApp{
 
