@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B4F88E0D-0A17-46F9-8520-C3A6CA5CC64C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>osc_skeleton</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>065E9EDF-BB8E-4439-BE7A-C007FDD32D0D</key>
+		<string>https://github.com/jedahan/osc_skeleton.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>osc_skeleton.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>065E9EDF-BB8E-4439-BE7A-C007FDD32D0D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jedahan/osc_skeleton.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>065E9EDF-BB8E-4439-BE7A-C007FDD32D0D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>065E9EDF-BB8E-4439-BE7A-C007FDD32D0D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>osc_skeleton</string>
+		</dict>
+	</array>
+</dict>
+</plist>
