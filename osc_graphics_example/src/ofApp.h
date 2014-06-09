@@ -7,8 +7,8 @@
 
 // You can find these IP addresses by running the following at the command line
 // ifconfig | grep inet | grep 127.0.0.1 --invert-match
-#define MY_IP_ADDRESS "192.168.2.2"
-#define BROADCAST_IP "192.168.2.255"
+#define MY_IP_ADDRESS "192.168.1.6"
+#define BROADCAST_IP "192.168.1.255"
 
 class ofApp : public ofBaseApp {
 
@@ -31,6 +31,6 @@ public:
     ofxOscSender oscSender;
     
     void drawRemoteMouse(int x, int y);
-    vector<ofVec2f> remoteMicePositions;
+    map<string, ofVec2f> remoteMicePositions;
 
 };

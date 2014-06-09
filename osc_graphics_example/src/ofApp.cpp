@@ -27,8 +27,8 @@ void ofApp::update(){
             if(m.getAddress() == "/mouse/moved"){
                 cout << m.getRemoteIp() << " mouse moved to " << m.getArgAsInt32(0) << ", " << m.getArgAsInt32(1) << endl;
                 
-                // Push the remote mouse location onto the vector of mice to draw
-                remoteMicePositions.push_back(ofVec2f(m.getArgAsFloat(0), m.getArgAsFloat(1)));
+                // Push the remote mouse location onto the map of mice to draw
+                remoteMicePositions[m.getRemoteIp()] = ofVec2f(m.getArgAsFloat(0), m.getArgAsFloat(1));
             }
             
             // example of handling a /mouse/pressed message
@@ -52,8 +52,8 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw() {
     // loop through the vector of remoteMicePositions, draw 'em.
-    for (int i = 0; i < remoteMicePositions.size(); i++) {
-        ofVec2f mousePos = remoteMicePositions.at(i);
+    for(auto iterator = remoteMicePositions.begin(); iterator != remoteMicePositions.end(); iterator++) {
+        ofVec2f mousePos = iterator->second;
         drawRemoteMouse(mousePos.x, mousePos.y);
     }
 }
