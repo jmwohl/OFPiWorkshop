@@ -11,9 +11,6 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
     
-    // clear the previous frame's mice positions
-    remoteMicePositions.clear();
-    
     // check for waiting messages
 	while(oscReceiver.hasWaitingMessages()){
 		// get the next message
