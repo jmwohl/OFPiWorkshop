@@ -52,7 +52,8 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw() {
     // loop through the vector of remoteMicePositions, draw 'em.
-    for(auto iterator = remoteMicePositions.begin(); iterator != remoteMicePositions.end(); iterator++) {
+    typedef map<string, ofVec2f>::iterator it_type;
+    for(it_type iterator = remoteMicePositions.begin(); iterator != remoteMicePositions.end(); iterator++) {
         ofVec2f mousePos = iterator->second;
         drawRemoteMouse(mousePos.x, mousePos.y);
     }
